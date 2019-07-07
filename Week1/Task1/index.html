@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <titile>NGUYEN KHAC MINH QUAN - TASK1</titile>
+        <link rel="stylesheet" type="text/css" href="css/task1.css">
+    </head>
+    <body>
+        <header>
+            <h1>Nguyễn Khắc Minh Quân - Task1 </h1>
+        </header>
+        <div class="content">
+                <img class="image" src="image/img1.jpg">
+                <ol type="A">
+                    <li>
+                        <h4>
+                            So sánh file HTML có định dạng .html và .htm. Nếu không có các thẻ &lt;html&gt;, &lt;head&gt; và &lt;body&gt; thì có ảnh hưởng gì trong file HTML không?
+                        </h4>
+                        <ul>
+                            <li>
+                                Hoàn toàn không có sự khác biệt giữa file .html và .htm. Chúng có thể sử dụng thay thế cho nhau. Do đó, bạn có thể đổi tên một file với phần đuôi .html thành .htm và ngược lại. Trình duyệt web sẽ vẫn hiển thị nội dung dưới cùng một hình thức. Vậy tại sao lại có tới 2 cách đặt phần mở rộng khác nhau cho cùng một loại file? Câu trả lời như sau: ngày xửa ngày xưa, trên nhiều hệ điều hành, phần mở rộng của file chỉ được sử dụng 3 kí tự. Điều này đặc biệt đúng với Microsoft Windows, nền tảng hệ điều hành phổ biến nhất (lúc đó và cũng như bây giờ). Thế nên, rất nhiều những trang web được tạo từ những ngày xưa cũ ấy sẽ có phẩn mở rộng là .htm, chỉ 3 kí tự mà thôi.
+                            </li>
+                            <li>
+                                Nếu không có các thẻ &lt;html&gt;, &lt;head&gt; và &lt;body&gt; thì không ảnh hưởng gì đến file html. 
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Có những cách nào để hiển thị các thẻ HTML để hiển thị ra bên ngoài mà không bị HTML xử lý. 
+                            Ví dụ hiển thị các nội dung như &lt;/br&gt;&lt;div&gt;&lt;h1&gt;Hello HTML&lt;/h1&gt;&lt;/div&gt;</h4>
+                        <ul>
+                            <li>
+                                - Ta sử dụng HTML Entities để hiển thị hai dấu &lt;&gt;:
+                            </li>
+                            <ul>
+                                <li>
+                                    Dấu &lt; sẽ tương ứng với &amp;lt; hoặc &amp;#60;
+                                </li>
+                                <li>
+                                    Dấu &gt; sẽ tương ứng với &amp;gt; hoặc &amp;#62;
+                                </li>
+                            </ul>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Làm thế nào để tạo vùng chọn để định dạng trong CSS cho một, một class và một ID?</h4>
+                        <ul>
+                            <li>
+                                Định dạng CSS cho tag:<br>
+                                [tên tag] {<br>
+                                [Nội dung định dạng]<br>
+                                }
+                            </li>
+                            <li>
+                                Định dạng cho class:<br>
+                                .[tên class] {<br>
+                                [Nội dung định dạng]<br>
+                                }
+                            </li>
+                            <li>
+                                Định dạng cho ID:<br>
+                                #[tên ID] {<br>
+                                [Nội dung định dạng]<br>
+                                }
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Tìm và cho ví dụ về các thẻ có chức năng sau:</h4>
+                        <ul>
+                            <li>
+                                Gạch chân, kẻ đường thẳng, chỉ số trên, chỉ số dưới:
+                                <ul>
+                                    <li><u>Gạch chân:</u> Dùng thẻ &lt;u&gt;</li>
+                                    <li>Đường kẻ ngang: Dùng thẻ &lt;hr&gt;</li><hr>
+                                    <li>Chỉ số <sup>trên</sup>: Dùng thẻ &lt;sup&gt;</li>
+                                    <li>Chỉ số <sub>trên</sub>: Dùng thẻ &lt;sub&gt;</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Tạo bảng(có ghép dòng, ghép cột)
+                                <ul>
+                                    <li>
+                                        Tạo bảng có ghép cột:<br>
+                                        <table>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th colspan="2">Telephone</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Minh Quan</td>
+                                                <td>0836007890</td>
+                                                <td>01236007890</td>
+                                            </tr>
+                                        </table>
+                                    </li>
+                                    <li>
+                                        Tạo bảng có ghép dòng:<br>
+                                        <table>
+                                            <tr>
+                                                <th>Name</th>
+                                                <td>Minh Quan</td>
+                                            </tr>
+                                            <tr>
+                                                <th rowspan="2">Telephone</th>
+                                                <td>0836007890</td>
+                                            </tr>
+                                            <tr>
+                                                <td>01236007890</td>
+                                            </tr>
+                                        </table>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                4 hiệu ứng chữ chạy từ 4 hướng (trái, phải trên dưới)<br>
+                                <marquee>Chữ chạy qua trái</marquee></li<br>
+                                <marquee direction="right">Chữ chạy qua phải</marquee><br>
+                                <marquee direction="down">Chữ chạy trên xuống</marquee><br>
+                                <marquee direction="up">Chữ chạy dưới lên</marquee><br>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+        </div>
+        
+    </body>
+</html>
