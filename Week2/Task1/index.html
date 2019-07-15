@@ -1,0 +1,273 @@
+<!Doctype html>
+<html>
+    <head>
+            <title>Bootstrap Example</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="css/bootstrap.min.css">
+            <link rel="stylesheet" href="css/all.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+                }
+            }
+            #navbarText{
+                color: white;
+            }
+            .btn {
+                background-color: DodgerBlue;
+                border: none;
+                color: white;
+                padding: 12px 16px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            
+        </style>
+    </head>
+        <body>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">WebSiteName</a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page 2</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>  
+            </nav>
+            <div class="container-fluid">
+                <div class="row">
+                    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                        <div class="sidebar-sticky">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <!--<a class="nav-link" href="#">Bài 1</a>-->
+                                    <a class="nav-link" id="priority" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Câu 1</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="priority" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Câu 2</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="priority" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">Câu 3</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="priority" data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls="multiCollapseExample4">Câu 4</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <div class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+                        <div class="panel-collapse collapse" id="multiCollapseExample1">
+                            <div class="card card-body">
+                                <h4>Câu 1: Trình bày các cách để tích hợp Bootstrap vào một trang HTML/CSS bình thường trong
+                                        điều kiện đang có kết nối Internet? Trong Bootstrap đã được biên dịch gồm có những gì?</h4>
+                                <div>
+                                    <ul>
+                                        <li style="padding-top:20px;">
+                                            Để có thể tích hợp Bootstrap ta có thể sử dụng các liên kết Bootstrap CDN
+                                            <div class="card card-body">
+                                                    &lt;!-- Latest compiled and minified CSS --&gt;<br>
+                                                    &lt;link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"&gt;
+                                                    <br>
+                                                    &lt;!-- Optional theme --&gt;<br>
+                                                    &lt;link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"&gt;<br>
+                                                    &lt;!-- Latest compiled and minified JavaScript --&gt;<br>
+                                                    &lt;script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"&gt;&lt;/script&gt;
+                                            </div>
+                                        </li>
+                                        <li style="padding-top:20px;">
+                                            Trong Bootstrap đã được biên dịch gồm có:
+                                            <div class="card card-body">
+                                                    bootstrap/<br>
+                                                    ├── css/<br>
+                                                    │   ├── bootstrap.css<br>
+                                                    │   ├── bootstrap.min.css<br>
+                                                    │   ├── bootstrap-theme.css<br>
+                                                    │   └── bootstrap-theme.min.css<br>
+                                                    ├── js/<br>
+                                                    │   ├── bootstrap.js<br>
+                                                    │   └── bootstrap.min.js<br>
+                                                    └── fonts/<br>
+                                                        ├── glyphicons-halflings-regular.eot<br>
+                                                        ├── glyphicons-halflings-regular.svg<br>
+                                                        ├── glyphicons-halflings-regular.ttf<br>
+                                                        └── glyphicons-halflings-regular.woff<br>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="multiCollapseExample2">
+                            <div class="card card-body">
+                                <h4>Câu 2: Responsive là gì? Làm thế nào nếu muốn vô hiệu hóa tính năng Responsive khi đang sử
+                                        dụng Bootstrap?</h4>
+                                <div>
+                                    <ul>
+                                        <li style="padding-top: 20px;">Responsive là phong cách thiết kế website phù hợp trên tất cả các thiết bị, mọi độ phân giải màn hình. “Responsive Web Design” là xu hướng thiết kế web hiện nay</li>
+                                        <li style="padding-top: 20px;">
+                                            Các bước để vô hiệu hóa tính năng responsive:
+                                            <div class="card card-body">
+                                                1. Hãy bỏ thẻ &lt;meta&gt; viewport đã được đề cập đến trong tài liệu CSS<br>
+                                                2. Hãy ghi đè thuộc tính width trên .container đối với mỗi cột trong hệ thống lưới, ví dụ width: 970px !important; Hãy chắc chắn rằng, các mã CSS tùy biến này được tích hợp vào sau CSS mặc định của Bootstrap. Bạn cũng có thể tránh sử dụng 
+                                                !important bằng các media query hoặc một số selector-fu.<br>
+                                                3. Nếu bạn sử dụng thanh điều hướng, hãy vô hiệu hóa toàn bộ các tính năng thu gọn và mở rộng trên thanh điều hướng đó.<br>
+                                                4. Đối với các bố cục dạng lưới, hãy sử dụng class .col-xs-* bằng cách thêm vào hoặc thay thế cho các class medium/large. Đừng lo lắng, hệ thống lưới trên các thiết bị có màn hình siêu nhỏ sẽ tự động co giãn đối với mọi độ phân giải.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="multiCollapseExample3">
+                            <div class="card card-body" >
+                                <h4>Câu 3: Tìm hiểu về hệ thống lưới (Grid System) của Bootstrap và so sánh hoạt động của hệ thống
+                                        lưới này trên các thiết bị có kích thước màn hình khác nhau như Phones (&lt;768px), Tablet
+                                        ( ≥768px), Desktop( ≥992px và ≥1200px).</h4>
+                                <div>
+                                        <ul>
+                                            <li style="padding-top: 20px;">
+                                                Hệ thống lưới (grid system) được bổ sung thêm 1 class mới là .col-xl-
+                                                <div class="card card-body">
+                                                        col-  (áp dụng cho các thiết bị có độ rộng màn hình &lt; 576px)<br>
+                                                        col-sm- (áp dụng cho các thiết bị có độ rộng màn hình từ 576px – 767px)<br>
+                                                        col-md- (áp dụng cho các thiết bị có độ rộng màn hình từ 768px – 991px)<br>
+                                                        col-lg- (áp dụng cho các thiết bị có độ rộng màn hình từ 992px – 1199px)<br>
+                                                        col-xl – (áp dụng cho các thiết bị có độ rộng màn hình >= 1200px)<br>
+                                                </div>
+                                            </li>
+                                            <li style="padding-top: 20px;">
+                                                Bảng dưới đây sẽ tóm tắt hệ thống lưới(grid system) của Bootstrap 4 trên từng loại thiết bị: 
+                                                <img src="image/compare.jpg" alt="Compare-Table" style="height: 500px;" class="card-body"><br>
+                                            </li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="multiCollapseExample4">
+                                <div class="card card-body">
+                                    <h4 class="card-body">Câu 4: Tìm và cho ví dụ về cách để thực hiện các yêu cầu sau:</h4>
+                                    <div>
+                                        <ul>
+                                            <li style="padding-top:0px;">
+                                                Chèn 1 button 1 biểu tượng trong Button đó:<br>
+                                                <button class="btn"><i class="fa fa-home"></i> Home</button>
+                                                <button class="btn"><i class="fa fa-bars"></i> Menu</button>
+                                                <button class="btn"><i class="fa fa-trash"></i> Trash</button>
+                                                <button class="btn"><i class="fa fa-close"></i> Close</button>
+                                                <button class="btn"><i class="fa fa-folder"></i> Folder</button>
+                                                <div class="card card-body" style="padding-top:10px;">
+                                                    &lt;button class="btn"&gt;&lt;i class="fa fa-home"&gt;&lt;/i&gt; Home&lt;/button&gt;
+                                                </div>
+                                            </li>
+                                            <li style="padding-top:20px;">
+                                                Chèn 1 thanh Progress bar (tiến trình) tương tự trong CV ở Task 1.2.
+                                                <div class="progress">
+                                                        <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">70%</div>
+                                                </div>
+                                                <div class="card card-body">    
+                                                     &lt;div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">70%&gt;
+                                                </div>
+                                            </li>
+                                            <li style="padding-top:20px;">
+                                                    Chèn các loại cảnh báo (Alert) trong trang như Succes, Info, Danger, Warning.
+                                                    <div class="alert alert-success" role="alert">
+                                                        This is a success alert—check it out!
+                                                    </div>
+                                                    <div class="alert alert-danger" role="alert">
+                                                        This is a danger alert—check it out!
+                                                    </div>
+                                                    <div class="alert alert-warning" role="alert">
+                                                        This is a warning alert—check it out!
+                                                    </div>
+                                                    <div class="alert alert-info" role="alert">
+                                                        This is a info alert—check it out!
+                                                    </div>
+                                                    <div class="card card-body">    
+                                                            &lt;div class="alert alert-success" role="alert"&gt;<br>
+                                                            &nbsp;This is a success alert—check it out!<br>
+                                                            &lt;/div&gt;<br>
+                                                            &lt;div class="alert alert-danger" role="alert"&gt;<br>
+                                                            &nbsp;This is a danger alert—check it out!<br>
+                                                            &lt;/div&gt;<br>
+                                                            &lt;div class="alert alert-warning" role="alert"&gt;<br>
+                                                            &nbsp;This is a warning alert—check it out!<br>
+                                                            &lt;/div&gt;<br>
+                                                            &lt;div class="alert alert-info" role="alert"&gt;<br>
+                                                            &nbsp;This is a info alert—check it out!<br>
+                                                            &lt;/div&gt;<br>
+                                                    </div>
+                                            </li>
+                                            <li style="padding-top:20px;">
+                                                    Chèn 1 menu (Navigation) trong đó có 1 mục có menu con xổ xuống.
+                                                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                                            <a class="navbar-brand" href="#">Navbar</a>
+                                                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                                              <span class="navbar-toggler-icon"></span>
+                                                            </button>
+                                                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                                              <ul class="navbar-nav">
+                                                                <li class="nav-item active">
+                                                                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                  <a class="nav-link" href="#">Features</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                  <a class="nav-link" href="#">Pricing</a>
+                                                                </li>
+                                                                <li class="nav-item dropdown">
+                                                                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Dropdown link
+                                                                  </a>
+                                                                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                                    <a class="dropdown-item" href="#">Action</a>
+                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                    <a class="dropdown-item" href="#">Something else here</a>
+                                                                  </div>
+                                                                </li>
+                                                              </ul>
+                                                            </div>
+                                                    </nav>
+                                                    b
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(document).click(function(e) {
+	                if ($(e.target).is('#priority')) {
+    	                $('.collapse').collapse('hide');	    
+                    }
+                });
+            </script>
+        </body>
+    
+</html>
