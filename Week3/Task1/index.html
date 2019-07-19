@@ -1,0 +1,195 @@
+<!Doctype html>
+<html>
+    <head>
+            <title>Bootstrap Example</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="css/bootstrap.min.css">
+            <link rel="stylesheet" href="css/all.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+                }
+            }
+            #navbarText{
+                color: white;
+            }
+            .btn {
+                background-color: DodgerBlue;
+                border: none;
+                color: white;
+                padding: 12px 16px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            
+        </style>
+    </head>
+        <body>
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">WebSiteName</a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page 2</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>  
+            </nav>
+            <div class="container-fluid">
+                <div class="row">
+                    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                        <div class="sidebar-sticky">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <!--<a class="nav-link" href="#">Bài 1</a>-->
+                                    <a class="nav-link" id="priority" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Câu 1</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="priority" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Câu 2</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="priority" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">Câu 3</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="priority" data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls="multiCollapseExample4">Câu 4</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <div class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+                        <div class="panel-collapse collapse" id="multiCollapseExample1">
+                            <div class="card card-body">
+                                <h4>Câu 1: Những vị trí nào có thể đặt Javascript trong file HTML và dặt theo cú pháp nào? Nên đặt
+                                    Javascript tại vị trí nào để có hiệu suất tốt nhất? Cho ví dụ minh họa.</h4>
+                                <div>
+                                    <ul>
+                                        <li style="padding-top:20px;">
+                                            Các thẻ &lt;script&gt; có thể xuất hiện trong phần &lt;head&gt; hay &lt;body&gt; của file HTML
+                                        </li>
+                                        <li style="padding-top:20px;">
+                                            Nếu thẻ &lt;script&gt; được đặt trong phần &lt;head&gt;, nó sẽ được tải và sẵn sàng trước khi phần còn lại của văn bản được tải
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="multiCollapseExample2">
+                            <div class="card card-body">
+                                <h4>Trong Javascript có những kiểu dữ liệu nào? Làm thế nào để tạo một biến để lưu trữ giá
+                                    trị tương ứng với những kiểu dữ liệu đó?</h4>
+                                <div>
+                                    <ul>
+                                        
+                                        <li style="padding-top: 20px;">
+                                            Tiêu chuẩn ECMAScript mới nhất xác định bảy kiểu dữ liệu:
+                                            <div class="card card-body">
+                                                1. Kiểu boolean<br>
+                                                2. Kiểu của null<br>
+                                                3. Kiểu của undefined<br>
+                                                4. Kiểu số<br>
+                                                5. Kiểu chuỗi<br>
+                                                6. Kiểu Symbol<br>
+                                                7. Kiểu đối tượng<br>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="multiCollapseExample3">
+                            <div class="card card-body" >
+                                <h4>Câu 3: . Làm thế nào để truy xuất (lấy giá trị) trong 1 thẻ HTML bất kỳ và gán vào 1 biến để trong
+                                    Javascript theo ID, theo Class, theo Name, theo tên thẻ HTML và theo CSS Selector (ví dụ
+                                    .class, #id)? Cho ví dụ minh họa.
+                                    </h4>
+                                <div>
+                                        <ul>
+                                            <li style="padding-top: 20px;">
+                                                HTML Element by Id
+                                                <div class="card card-body">
+                                                    document.getElementById("demo").innerHTML = "Hello World";
+                                                </div>
+                                            </li>
+                                            <li style="padding-top: 20px;">
+                                                HTML Elements by Tag Name
+                                                <div class="card card-body">
+                                                    var x = document.getElementsByTagName("p");
+                                                </div>
+                                            </li>
+                                            <li style="padding-top: 20px;">
+                                                HTML Elements by Class Name
+                                                <div class="card card-body">
+                                                    var x = document.getElementsByClassName("intro");
+                                                </div>
+                                            </li>
+                                            <li style="padding-top: 20px;">
+                                                HTML Elements by CSS Selectors
+                                                <div class="card card-body">
+                                                    var x = document.querySelectorAll("p.intro");
+                                                </div>
+                                            </li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="multiCollapseExample4">
+                                <div class="card card-body">
+                                    <h4 class="card-body">Câu 4: Xác định các lệnh Javascript tương ứng để thực hiện các yêu cầu sau::</h4>
+                                    <div>
+                                        <ul>
+                                            <li style="padding-top:0px;">
+                                                Viết ghi chú trong Javascript (1 dòng, nhiều dòng)<br>
+                                                
+                                                <div class="card card-body" style="padding-top:10px;">
+                                                    1 dòng dùng "//"<br>
+                                                    nhiều dòng dùng "/*" và "*/"<br>
+                                                </div>
+                                            </li>
+                                            <li style="padding-top:20px;">
+                                                Hiển thị thời gian hiện tại (từ năm đến giây theo múi giờ GMT+7 - Việt Nam).
+                                                <div class="card card-body">    
+                                                    var d = new Date();
+                                                </div>
+                                            </li>
+                                           
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(document).click(function(e) {
+	                if ($(e.target).is('#priority')) {
+    	                $('.collapse').collapse('hide');	    
+                    }
+                });
+            </script>
+        </body>
+    
+</html>

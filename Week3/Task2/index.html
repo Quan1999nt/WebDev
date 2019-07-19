@@ -1,0 +1,88 @@
+<!Doctype html>
+<html>
+    <head>
+            <title>Bootstrap Example</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="css/bootstrap.min.css">
+            <link rel="stylesheet" href="css/all.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+        <style>
+            body{
+                background-image: url("image/bg1.jpg");
+                background-size: cover;
+                color:white;
+            }
+            .Center{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                min-height: 100vh;
+            }
+            #demo{
+                font-size: 3cm;
+            }
+            #Gretting{
+                font-size: 1cm;
+                
+            }
+            .form-inline {  
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+                margin-top:-50px;
+                justify-content: center;
+            }
+            input[type=text] {
+                box-sizing: border-box;
+                border: none;
+                padding-bottom: 20px;
+                font-size: 1cm;
+                color: white !important;
+                width: 300px!important;
+                background-color: rgba(0, 0, 0, 0) !important;
+            }
+            #name{
+                font-size: 1cm;
+            }
+        </style>
+    </head>
+    <body onload="myFunction()">
+        <div class="Center">
+            <p id="demo"></p>
+            <p style="margin-top: -50px;">
+                <span id="Gretting">Good morning, </span>
+                <span id="name" spellcheck="false" data-test="name" contenteditable="false" onclick="UpdateText()">Quan</span>
+                <span id="name1" spellcheck="false" data-test="name" contenteditable="false" onclick="UpdateText()">Quan</span>
+            </p>
+        </div>
+        <script>
+            var editable_elements = document.querySelectorAll("[contenteditable=false]");
+            var input = document.getElementById("name");
+            
+            function myFunction() {
+                var id = setInterval(frame, 1000);
+                function frame() {
+                    var d = new Date();
+                    var h = d.getHours();
+                    var m =d.getMinutes();
+                    var s =d.getSeconds();
+                    document.getElementById("demo").innerHTML = h+":"+m+":"+s;
+                }
+            }
+            function UpdateText(){
+                editable_elements[0].setAttribute("contenteditable", true);
+                input.addEventListener("keydown", function(event) {
+                    if (event.keyCode === 13) {
+                        event.preventDefault();
+                        editable_elements[0].setAttribute("contenteditable", false);
+                    }
+                });
+            }
+        </script>
+    </body>
+    
+</html>

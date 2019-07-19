@@ -1,0 +1,64 @@
+//Danh sách hình ảnh:
+var arr_img = [
+    "img/1.png", "img/2.png", "img/3.png", "img/4.png", "img/5.png", "img/6.png", "img/7.png", "img/8.png"
+]
+
+//list grid-item
+var arrGridItem = document.querySelectorAll("img#id1");
+var tmp_img1 = null;
+var vtri_img1=16;
+var vtri_img2=16;
+var arrayImage = new Array();
+for (var i = 0; i < 15; i++) {
+    arrayImage[i] = null;
+}
+//xử lý khi ấn nút
+function CheckStatus(k){
+    if(arrGridItem[k].src!="#"){
+        arrGridItem[k].src=arrayImage[k];
+        if(tmp_img1==null){
+            tmp_img1=arrayImage[k];
+            vtri_img1=k;
+            //arrGridItem[k].style.backgroundImage=arrayImage[k];
+            //setTimeout(function(){arrGridItem[k].src="img/disable.jpg";}, 1000);
+            
+        }
+        else{
+            if(k!=vtri_img1){
+                if(tmp_img1==arrayImage[k]){
+                    setTimeout(function(){arrGridItem[k].src="#"; arrGridItem[vtri_img1].src="#";tmp_img1=null;}, 500);
+                }
+                else{
+                    setTimeout(function(){arrGridItem[k].src="img/disable.jpg"; arrGridItem[vtri_img1].src="img/disable.jpg";tmp_img1=null;}, 500);
+                }
+            }
+        }
+    }
+}
+
+
+
+//ẩn nút play
+function letPlay() {
+    document.getElementById("start").style.display = "none";
+    //arrayImage[0] = arr_img[2];
+    for (var i = 0; i < 8; i++) {
+        //Tìm vị trí để nhúng hình ảnh vào
+        //Nếu đã có ảnh rồi thì lặp lại tìm vị trí mới
+        do {
+            var tmp1 = Math.floor(Math.random() * 16);
+        } while (arrayImage[tmp1] != null);
+        arrayImage[tmp1] = arr_img[i];
+
+        do {
+            var tmp2 = Math.floor(Math.random() * 16);
+        } while (arrayImage[tmp2] != null);
+        arrayImage[tmp2] = arr_img[i];
+    }
+    for(var i=0;i<16;i++){
+        arrGridItem[i].src="img/disable.jpg";
+    }
+    
+    
+    
+}
